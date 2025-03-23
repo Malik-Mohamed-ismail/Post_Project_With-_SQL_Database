@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/Malik-Mohamed-ismail/Post_Project_With-_SQL_Database.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

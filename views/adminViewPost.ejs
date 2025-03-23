@@ -1,0 +1,85 @@
+
+
+<div class="navber">
+    <div class=" contiener">
+        <div class="nav-contiener">
+            <div class="logo"><a href="/">POSTS</a></div>
+            <!-- <div class="formSherch">
+                <form class="Searchform" id="searchForm">
+                    <input type="text" name="rr" id="search" placeholder="Search For Posts">
+                    <input type="submit" value="Search">
+                </form>
+            </div> -->
+            <ul class="ul-nav">
+                <% if(user) { %>
+                    <div class="name">
+                        <a href="#"><span class="text">Welcome:</span>  <span class="data"><%= user.username %></span> </a> |
+                        <a href="#"><span class="text">Email:</span>  <span class="data"><%= user.email %></span> </a> 
+                    </div> 
+                    <li><a href="/admin" class="btn btn-success-full">Admin</a></li>
+                    <li><a href="/logout" class="btn">logout</a></li>
+                <% }else { %>
+                    <li><a href='/singup' class="btn btn-full">SigUp</a></li>
+                    <li><a href='/signIn' class="btn">SigIn</a></li>
+                <% } %>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+
+<div class="contiener">
+
+    <div class="postid">
+        <div class="post-title">
+            <h2><%= post.title %></h2>
+            <div class="post-title-btn">
+                <a href='/adminViewPost/updatePost/<%= post.id %>' class="edit-img"><img class="edit-imge" src="/img/edit.png" alt="edit"></a>
+                <form id="deleteForm"><button class="delete"><img class="delete-img" src="/img/delete.png" alt="delete"></button></form>
+                <!-- <a href="#">Edit</a>
+                <a href="#">Delete</a> -->
+            </div>
+        </div>
+
+        <div class="post-body">
+            <p><%= post.body %></p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    const postDelete = document.getElementById('deleteForm');
+
+
+     
+
+        postDelete.addEventListener('submit', async(e) => {
+        
+            alert(`Post Deleted:\n <%= post.title %>`)
+        
+        e.preventDefault();
+
+        try {
+        const res = await fetch('/adminViewPost/<%= post.id %>', {
+            method: 'DELETE',
+        });
+        
+        const data = await res.json();
+        console.log(data)
+        
+        } catch (error) {
+            console.log(error)
+        }
+
+        location.assign('/admin');
+     })
+            
+
+    
+
+</script>

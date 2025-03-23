@@ -1,0 +1,600 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* darkcyan whitesmoke  teal  | seagreen , royalblue, olivedrab */
+
+.contiener {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* Utility Classes */
+.btn{
+    padding: 4px 10px;
+    background-color: #fff;
+    color: #434656;
+    border: 1.5px solid #434656;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 17px;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.btn:hover{
+    background-color: #4346569a;
+    color: #fff;
+    
+}
+
+/* btn-full */
+.btn-full{
+    background-color: #2d2d2d;
+    color: #fff;
+    border: 1.5px solid #fff;
+}
+.btn-full:hover{
+    background-color: #434656;
+    color: #fff;
+}
+
+/* btn-success */
+.btn-success-full{
+    background-color: rgb(25, 221, 97);
+    color: #434656;
+    border: 1.5px solid #fff;
+    border: 1px solid #434656;
+    padding: 5px 41px;
+}
+.btn-success-full:hover{
+    background-color: rgba(25, 221, 97, 0.79);
+    color: #0c1ee3;
+    border: 1px solid #0c1ee3;
+}
+
+.btn-success{
+    background-color: #fff;
+    color: rgb(25, 221, 97);
+    border: 1.5px solid rgb(25, 221, 97);
+}
+.btn-success:hover{
+    background-color: rgba(25, 221, 97, 0.566);;
+    color: #434656
+}
+
+/* btn-primary */
+.btn-primary-full{
+    background-color: royalblue;
+    color: #fff;
+    border: 1.5px solid #fff;
+}
+
+.btn-primary-full:hover{
+    background-color: #2d6ac6db;
+    color: #2d2d2d;
+}
+
+.btn-primary{
+    background-color: #fff;
+    color: royalblue;
+    border: 1.5px solid royalblue;
+}
+.btn-primary:hover{
+    background-color: #2d6ac697;
+    color: #2d2d2d;
+}
+
+/*End Utility Classes*/
+
+/* novation */
+.novation{
+    background-color: #b42016e7;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.navber{
+    background-color: whitesmoke;
+    padding: 15px 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+}
+
+.nav-contiener{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-contiener .logo{
+    font-weight: bold;
+}
+
+.nav-contiener .logo a {
+    color: royalblue;
+    text-decoration: none;
+    border: 1.5px solid royalblue;
+    padding: 7px 10px;
+}
+
+
+
+.formSherch form input{
+    border: 1px solid #2d2d2d;
+}
+.formSherch form input[type='search']{
+    padding: 4px 10px;
+}
+.formSherch form input[type='submit']{
+    padding: 4px 10px;
+    background-color: #2d2d2d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ul-nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.ul-nav .name {
+    margin-right: 40px;
+}
+
+.ul-nav .name a {
+    text-decoration: none;
+}
+
+.ul-nav .name a .text{
+    color: #2d2d2d;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ul-nav .name a .data{
+    color: seagreen
+}
+.ul-nav li{
+    margin-left: 20px;
+}
+
+.ul-nav li a {
+    text-decoration: none;
+}
+
+/* viw */
+.viw{
+    margin-top: 1px;
+    background-color: whitesmoke;
+    text-align: center;
+    /* height: 350px; */
+}
+
+.viw .viwConent{
+    padding: 100px;
+}
+
+.viw .viwConent h2{
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.viw .viwConent p {
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.viw .viwConent button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+}
+
+.viwFooter{
+    padding: 10px 0;
+    text-align: center;
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+.viwFooter a{
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* posts */
+.posts{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.cart{
+    padding: 5px;
+    border-radius: 5px;
+    width: 300px;
+    border: 1.5px solid royalblue
+}
+
+.cart:hover {
+    /* border: 1px solid rgb(255, 0, 0); */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+}
+
+.cart a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    text-align: justify;
+}
+.cart p{
+    color: #6b6767;
+    margin-bottom: 20px;
+}
+.cart a h3 {
+    margin-bottom: 10px;
+}
+
+.cart a .date {
+    color: royalblue;
+}
+
+.cart a .date .dataDate {
+    font-weight: bold;
+} 
+
+.viwllposts {
+    margin-left: 11px;
+    margin-top: 10px;
+}
+
+/* .btn-cart{
+    margin-top: 15px;
+    background-color: royalblue;
+    border: 2px solid royalblue;
+    padding: 4px 8px;
+    font-size: 17px;
+    width: 50%;
+    border-radius: 7px;
+}
+
+.btn-cart:hover {
+    background-color: rgba(65, 105, 225, 0.795);
+} */
+
+.viw-btn{
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* postid */
+.postid{
+    margin: 10px 0;
+    background-color: whitesmoke;
+    padding: 30px 5px;
+    border: 1px solid royalblue;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.postid .post-title {
+    margin: 8px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;  
+}
+
+.post-title-btn {
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    gap: 4px;
+    width: 90px;
+}
+
+.post-title-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.post-title-btn a {
+    border: 1px solid #2222;
+    background-color: teal;
+    padding: 3px;
+    border-radius: 3px;
+
+}
+
+.post-title-btn a:hover {
+    background-color: rgba(0, 128, 128, 0.772);
+}
+
+
+.post-title-btn form {
+    border: 1px solid #2222;
+    background-color: rgba(211, 28, 28, 0.808);
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.post-title-btn form:hover {
+    background-color: rgba(211, 28, 28, 0.6); ;
+}
+
+.post-title-btn form button {
+    border: none;
+    background-color: rgba(211, 28, 28, 0.808);
+    cursor: pointer;
+}
+
+.post-title-btn form button:hover {
+    background-color: rgba(211, 28, 28, 0.6);
+}
+
+
+
+.postid .post-body{
+    margin-top: 10px;
+}
+.postid .post-body p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+/* Admin */ 
+
+.add-post {
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.add-post a {
+    background-color: royalblue;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-post a:hover {
+    background-color: rgba(65, 105, 225, 0.811);
+    color: #2d2d2d;
+}
+
+.admin-all-posts div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid teal;
+    padding: 10px 5px;
+    margin: 10px 0;
+    border-radius: 3PX;
+}
+
+.admin-all-posts div:hover {
+    background-color: aliceblue;
+}
+
+.admin-all-posts div h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10PX;
+}
+
+.admin-all-posts div span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-all-posts div span button {
+    margin-right: 10px;
+    padding: 4px 8px;
+    border: 1px solid teal;
+    color: #FFF;
+    background-color: teal;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+.admin-all-posts div span .link {
+    margin-right: 10px;
+    padding: 2.5px 8px;
+    border: 1px solid teal;
+    color: #FFF;
+    background-color: teal;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+.admin-all-posts div span .link:hover{
+    background-color: rgba(0, 128, 128, 0.806);
+}
+
+.admin-all-posts div span .viw {
+    background-color: royalblue;
+    border: none;
+}
+
+.admin-all-posts div span .viw a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin-all-posts div span .viw:hover{
+    background-color: rgba(65, 105, 225, 0.82);
+}
+
+.admin-all-posts div span .delete{
+    
+    border: none;background-color: rgba(211, 28, 28, 0.808);
+}
+
+.admin-all-posts div span .delete:hover {
+    background-color: rgba(211, 28, 28, 0.6);
+}
+
+/* form-contiener */
+.form-contiener {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px;
+   
+}
+.form-contiener form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    min-width: 300px;
+    border: 0.5px solid #ccc;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16) 0 1px 1px rgba(0, 0, 0, 0.16);
+}
+
+.form-contiener form .add-post-title {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2d2d2d;
+}
+
+.form-contiener form label {
+    color: #2d2d2d;
+}
+.form-contiener form input {
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+}
+
+.form-contiener form textarea {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+
+.form-contiener form .add-post-button {
+    text-align: center;
+}
+
+.form-contiener form .add-post-button button {
+    padding: 9px 12px;
+    background-color:royalblue ;
+    border: none;
+    color: #FFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-contiener form .add-post-button button:hover {
+    background-color:rgba(65, 105, 225, 0.842) ;
+    color: #2d2d2d;
+}
+
+.signIn {
+    width: 400px;
+    height: 400px;
+}
+
+.signIn .add-post-button {
+    margin-top: 40px;
+}
+
+#error, #errorUpdate{
+    text-align: center;
+    color: #ed0c0cf0;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#massage{
+    text-align: center;
+    color: green;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#massageUpdate {
+    text-align: center;
+    color: green;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+
+.footer_contiener{
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 20px;
+}
+
+
+.footer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 250px; */
+}
+
+.footer p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer p, ul{
+    margin-bottom: 20px;
+}
+
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links li img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-links li img:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+
+

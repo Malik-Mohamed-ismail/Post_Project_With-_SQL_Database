@@ -1,0 +1,91 @@
+
+<div class="navber">
+    <div class=" contiener">
+        <div class="nav-contiener">
+            <div class="logo"><a href="/">POSTS</a></div>
+            <!-- <div class="formSherch">
+                <form class="Searchform" id="searchForm">
+                    <input type="text" name="rr" id="search" placeholder="Search For Posts">
+                    <input type="submit" value="Search">
+                </form>
+            </div> -->
+            <ul class="ul-nav">
+                <% if(user) { %>
+                    <div class="name">
+                        <a href="#"><span class="text">Welcome:</span>  <span class="data"><%= user.username %></span> </a> |
+                        <a href="#"><span class="text">Email:</span>  <span class="data"><%= user.email %></span> </a> 
+                    </div> 
+                    <li><a href="/admin" class="btn btn-success-full">Admin</a></li>
+                    <li><a href="/logout" class="btn">logout</a></li>
+                <% }else { %>
+                    <li><a href='/singup' class="btn btn-full">SigUp</a></li>
+                    <li><a href='/signIn' class="btn">SigIn</a></li>
+                <% } %>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+
+    <div class="contiener">
+        <div class="form-contiener">
+            
+            <form class="add-post" id="add-post">
+                <div class="add-post-title">
+                    <h2>Add Post</h2>
+                </div>
+                <div id="error"></div>
+                <div id="massage"></div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title">
+                <label for="body">Body:</label>
+                <textarea name="body" id="body"></textarea>
+                <div class="add-post-button"> 
+                    <button>Add Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+<script>
+
+    const addForm = document.getElementById('add-post');
+    let errorDev = document.getElementById('error')
+    let massageDev = document.getElementById('massage')
+
+    addForm.addEventListener('submit', async(e) => {
+        e.preventDefault();
+
+        // errorDev.innerHTML = '';
+        
+
+        const title = addForm.title.value;
+        const body = addForm.body.value;
+
+        // console.log(title , body)
+
+        try {
+        const res = await fetch('/adminAddPost', {
+            method: 'POST',
+            body: JSON.stringify({ title, body }),
+            headers: {'Content-Type': 'application/json'}
+        });
+        
+        const data = await res.json();
+        console.log(data)
+        errorDev.innerHTML = data.err ? data.err : data.err = '';
+        massageDev.innerHTML = data.Massage ? data.Massage : data.Massage = '';
+        } catch (error) {
+            console.log(error)
+        }
+
+        // location.assign('/');
+
+    })
+
+</script>

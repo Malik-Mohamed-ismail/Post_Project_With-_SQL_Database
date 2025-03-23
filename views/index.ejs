@@ -1,0 +1,69 @@
+<div class="navber">
+    <div class=" contiener">
+        <div class="nav-contiener">
+            <div class="logo"><a href="/">POSTS</a></div>
+            <!-- <div class="formSherch">
+                <form class="Searchform" id="searchForm">
+                    <input type="text" name="rr" id="search" placeholder="Search For Posts">
+                    <input type="submit" value="Search">
+                </form>
+            </div> -->
+            <ul class="ul-nav">
+                <% if(user) { %>
+                    <div class="name">
+                        <a href="#"><span class="text">Welcome:</span>  <span class="data"><%= user.username %></span> </a> |
+                        <a href="#"><span class="text">Email:</span>  <span class="data"><%= user.email %></span> </a> 
+                    </div> 
+                    <li><a href="/admin" class="btn btn-success-full">Admin</a></li>
+                    <li><a href="/logout" class="btn">logout</a></li>
+                <% }else { %>
+                    <li><a href='/singup' class="btn btn-full">SigUp</a></li>
+                    <li><a href='/signIn' class="btn">SigIn</a></li>
+                <% } %>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+
+
+<div class="viw">      
+    <div class=" contiener viwConent">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing.Quidem, neque?</h2>
+        <p>Lorem ipsum dolor sit, Lorem ipsum dolor sitLorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi beatae nam, dolor porro veniam!</p>
+        <button>Start Scheduling Posts On Social Media</button>
+    </div>
+</div>
+<div class="viwFooter">
+    <p>ARE YOU USING SOCIAL MEDIA AS A BUSINESS? . <a href="#">TRY BUFFER FOR BUSINESS</a></p>
+</div>
+
+<div class="contiener">
+    <div class="posts">
+        <% if(DataRow.length > 0 ) { %>
+        <% DataRow.forEach((posts)=> { %>
+            <div class="cart">
+                <a href="/post/<%= posts.id %>">
+                    <h3><%= posts.title %></h3>
+                    <p><%= posts.body.slice(0, 157) %> .....</p>
+                    <div>
+                        <span class="dataDate">Created at:</span> <span class="date"><%= posts.uptateAt.toDateString()%></span>
+                    </div>
+                </a>
+            </div>
+        <% }) %> 
+    </div>
+
+    <% } else{%>
+
+        <h2>The Is No Posts Right Now</h2>
+
+    <% } %>
+
+    <div class="viw-btn">
+        <a href="/viwAllPost" class="btn btn-primary-full">VIW All</a>
+    </div>
+</div>
+
